@@ -56,7 +56,14 @@
 }
 
 .shadow-1 {
-    box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 5px 10px #94dbb1;
+}
+
+.disable-white:disabled,
+.shadow-1:disabled {
+    background-color: #c5f4d5 !important;
+    color: gray !important;
+    box-shadow: none;
 }
 
 .shadow-2 {
@@ -65,6 +72,12 @@
 
 .h-400 {
     height: 400px;
+}
+
+.bg-white-button {
+    background-color: white;
+    border: 1px solid #0c8c40 !important;
+    color: #0c8c40 !important;
 }
 
 body {

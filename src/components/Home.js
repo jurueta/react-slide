@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import Slide from './Slide'
 
 // Jesus Urueta Creacion del componente home con lista y hook
@@ -31,19 +31,20 @@ export default function Home () {
         // Jesus Urueta Creacion de hook que se realizara la posicion
         const [position, setPosition] = useState(0)
 
+        document.title = `You are in the diapo ${position}`
         
         return (
            <React.Fragment>
                <div className="container">
                    <div className="row d-flex justify-content-center pt-5 mt-5 mb-5">
                        <div className="px-4">
-                            <button className="btn bg-boton white px-4 py-1 shadow-1" onClick={() => setPosition(0)} disabled={position == 0} >Restart</button>
+                            <button className="btn bg-white-button white px-4 py-1 font-weight-bold disable-white" onClick={() => setPosition(0)} disabled={position == 0} >Restart</button>
                        </div>
                        <div className="px-4">
-                            <button className="btn bg-boton white px-4 py-1 shadow-1" onClick={() => setPosition(position - 1)} disabled={position == 0}>Prev</button>
+                            <button className="btn bg-boton white px-4 py-1 shadow-1 font-weight-bold" onClick={() => setPosition(position - 1)} disabled={position == 0}>Prev</button>
                        </div>
                        <div className="px-4">
-                            <button className="btn bg-boton white px-4 py-1 shadow-1" onClick={() => setPosition(position + 1)  } disabled={ position == content.length-1 } >Next</button>
+                            <button className="btn bg-boton white px-4 py-1 shadow-1 font-weight-bold" onClick={() => setPosition(position + 1)  } disabled={ position == content.length-1 } >Next</button>
                        </div>
                    </div>
 
